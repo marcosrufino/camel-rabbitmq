@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: camel-spring
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+inventory:
+  rabbitmq:
+    queue: estoque
+    exchange: direct.estoque
+    routing-key: inventory
+#logging:
+#  level:
+#    org.apache.camel: DEBUG
+#    org.springframework.amqp: DEBUG
+server:
+  host: 0.0.0.0
+  port: 8080
+  base-uri: /api/v1/inventory/publish
